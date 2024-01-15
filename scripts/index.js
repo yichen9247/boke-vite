@@ -15,7 +15,18 @@ if (!fs.existsSync(destinationDir)){
 }
 
 fsExtra.copy(sourceDir, destinationDir, function(error) {   
-  if (error) {   
-    throw error;   
-  } 
+  if (error) throw error;
+
+  fs.readdir(destinationDir, (error, files) => {  
+    if (error) throw error;
+    
+    files.forEach(file => {
+      if (path.extname(file) === '.js') {
+        const filePath = path.join(destinationDir, file);
+        fs.unlink(filePath, error => {
+          if (error) throw error;
+        });  
+      }
+    });
+  });
 });

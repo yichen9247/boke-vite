@@ -13,6 +13,22 @@ export default defineConfig({
   build: {
     assetsDir: 'assets', // 静态资源目录
   },
+  server: {
+    routes: {
+      beforeEnter(req, res, next) {
+        if (/\.js$/.test(req.path)) {
+          res.redirect('/');
+        } else {
+          next();
+        }
+        if (/\.md$/.test(req.path)) {
+          res.redirect('/');
+        } else {
+          next();
+        }
+      }  
+    }  
+  },
   plugins: [
     vue(),
     AutoImport({
