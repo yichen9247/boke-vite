@@ -1,12 +1,11 @@
 
 import './assets/index.css'
+import App from '@/App.vue'
+import.meta.glob('../docs/')
+import router from '@/router'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import 'element-plus/dist/index.css'
-import.meta.glob('../docs/');
-
-import App from './App.vue'
-import router from './router'
 
 const app = createApp(App);
 

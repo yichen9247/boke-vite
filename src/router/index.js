@@ -21,8 +21,8 @@ const routerPath = [
 ];
 
 const createRoutes = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: routerPath
+  routes: routerPath,
+  history: createWebHistory(import.meta.env.BASE_URL)
 });
 
 export default createRoutes
