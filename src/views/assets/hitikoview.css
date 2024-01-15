@@ -2,6 +2,7 @@ div.hitokoto-box {
   width: auto;
   padding: 1rem;
   max-width: 30%;
+  overflow: hidden;
   line-height: 2rem;
   position: relative;
   border-radius: 10px;

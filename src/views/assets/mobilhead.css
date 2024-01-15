@@ -82,6 +82,7 @@ div.sidebar div.side-out-footer {
   flex-direction: column;
 }
 div.sidebar div.side-out-footer div.github-badge {
+  display: flex;
   margin-bottom: 20px;
 }
 div.sidebar div.side-out-footer:last-child {
