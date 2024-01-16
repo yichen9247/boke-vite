@@ -7,6 +7,8 @@ div.hitokoto-box {
   position: relative;
   border-radius: 10px;
   margin-top: 1.25rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* 黑色阴影 */
 }
 div.hitokoto-box {
   letter-spacing: 0;

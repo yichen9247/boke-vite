@@ -1,4 +1,5 @@
 
+const blocksPattern = /\[block\] (.+)/;
 const coloinePattern = /\{colorLine\}/;
 const coloiamPattern = /\{colorLamp\}/;
 const noticePattern = /\[notice\] (.+)/;
@@ -19,5 +20,5 @@ const musicPattern = {
 }
 
 export default {
-    message,musicPattern,coloinePattern,coloiamPattern,noticePattern,messagePattern,titlesPattern
+    blocksPattern,message,musicPattern,coloinePattern,coloiamPattern,noticePattern,messagePattern,titlesPattern
 }

@@ -31,7 +31,7 @@ const renderMarkdown = (data) => {
     }
 
     renderer.image = (src) => {
-        return `<img class="post-block-image" src="${src}" draggable="false" tabindex="0"/>`;
+        return `<p><img class="post-block-image" src="${src}" draggable="false" tabindex="0"/></p>`;
     }
 
     renderer.codespan = (text) => {
@@ -74,6 +74,14 @@ const renderMarkdown = (data) => {
         if (text.match(patternConfig.coloiamPattern)) {
             return `
                 <span class="marked-color-lamp"></span>
+            `;
+        } else 
+
+        if (text.match(patternConfig.blocksPattern)) {
+            return `
+                <div class="marked-blocked">
+                    <span class="block-text">${text.replace(patternConfig.blocksPattern, '$1')}</span>
+                </div>
             `;
         } else 
         if (text.match(patternConfig.noticePattern)) {

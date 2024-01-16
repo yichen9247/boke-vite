@@ -72,6 +72,9 @@ div.sidebar ul.side-out-navlist li.navlist-item {
   display: flex;
   align-items: center;
 }
+div.sidebar ul.side-out-navlist li.navlist-item a.item-link {
+  width: 100%;
+}
 div.sidebar ul.side-out-navlist li.navlist-item span.link-text {
   display: flex;
   line-height: 35px;

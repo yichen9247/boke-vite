@@ -162,6 +162,7 @@ div.item-content {
                 width: 4.2em;
                 height: 4.2em;
                 display: block;
+                min-width: 4.2em;
                 overflow: hidden;
                 border-radius: 8px;
 
@@ -175,16 +176,27 @@ div.item-content {
             }
 
             div.post-content {
+                width: 100%;
                 flex: 1 1 0%;
                 height: 4.2em;
                 display: flex;
-                align-items: center;
                 padding-left: 10px;
+                align-items: center;
 
                 a.post-title {
+                    width: 100%;
                     padding: 2px 0;
-                    font-weight: bold;
-                    -webkit-line-clamp: 3;
+                    
+                    p {
+                        width: 100%;
+                        overflow: hidden;
+                        font-weight: bold;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        text-overflow: ellipsis;
+                        margin-bottom: 0!important;
+                        -webkit-box-orient: vertical;
+                    }
                 }
 
             }
@@ -200,7 +212,9 @@ div.item-content {
 
                 div.post-content {
                     a.post-title {
-                        color: #ffffff;
+                        p {
+                            color: #ffffff;
+                        }
                     }
                 }
             }

@@ -21,7 +21,7 @@
     }
 
     const postIndex = ref(8);
-    const postArray = ref(posts.slice(0,postIndex.value));
+    const postArray = ref(posts.slice(0,postIndex.value).reverse());
 
     watch(postIndex,(newValue,oldValue) => {
         postArray.value = posts.slice(0,postIndex.value);

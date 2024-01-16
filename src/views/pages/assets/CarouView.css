@@ -41,4 +41,6 @@ div.carousel-chart a.carousel-item div.carousel-item-cover p.item-title {
   color: #ffffff;
   font-weight: 700;
   font-size: 1.75rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* 黑色阴影 */
 }

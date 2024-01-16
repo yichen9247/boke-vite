@@ -41,11 +41,11 @@ div#profile[data-theme="dark"] div.code-pre-block p,
 div#profile[data-theme="dark"] div.code-pre-block span {
   color: #ffffff;
 }
-div#profile section#section p,
-div#profile section#section span {
+div#profile[data-theme="dark"] section#section p,
+div#profile[data-theme="dark"] section#section span {
   color: var(--textard-color);
 }
-div#profile section#section li {
+div#profile[data-theme="dark"] section#section li {
   color: var(--textard-color);
 }
 div#profile {
@@ -89,6 +89,8 @@ div#headerfile div.context-box h1.TopTitle {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* 黑色阴影 */
 }
 div#headerfile div.context-box h1.TopTitle {
   cursor: default;

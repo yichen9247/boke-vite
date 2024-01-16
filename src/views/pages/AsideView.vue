@@ -84,7 +84,9 @@
                             <img class="image" :src="item.config.image" :alt="item.config.name">
                         </a>
                         <div class="post-content">
-                            <a class="post-title" :href="`./docs/${item.path}`" :title="item.config.name">{{ item.config.name }}</a>
+                            <a class="post-title" :href="`./docs/${item.path}`" :title="item.config.name">
+                                <p>{{ item.config.name }}</p>
+                            </a>
                         </div>
                     </li>
                 </ul>
