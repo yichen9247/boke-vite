@@ -1,4 +1,8 @@
 
+@borderd-color: var(--borderd-color);
+@backard-color: var(--backard-color);
+@textard-color: var(--textard-color);
+
 div#article-head {
     width: 100%;
     height: 400px;
@@ -32,11 +36,11 @@ div#post-tages {
 
     span.tag {
         cursor: pointer;
-        color: #363636;
         line-height: 35px;
         padding: 0px 10px;
         font-size: 0.85em;
         border-radius: 8px;
+        color: @textard-color;
     }
 
     span.tag {
@@ -44,8 +48,8 @@ div#post-tages {
         transition: 0.5s;
         width: fit-content;
         margin: 0 1rem 0 0;
-        background-color: transparent;
-        border: 1px solid var(--el-border-color);
+        background-color: @backard-color;
+        border: 1px solid @borderd-color;
     }
 
     span.tag {
@@ -59,9 +63,9 @@ div#post-tages {
                 opacity: 0.4;
                 font-size: 1rem;
                 transition: 0.5s;
-                color: #363636;
                 margin-right: 5px;
                 position: relative;
+                color: @textard-color;
             }
         }
 

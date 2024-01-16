@@ -1,4 +1,10 @@
 
+@domin-color: var(--dominColor);
+@butto-color: var(--buttoColor);
+@primary-color: var(--primary-color);
+@backard-color: var(--backard-color);
+@borderd-color: var(--borderd-color);
+
 header#site-header {
     width: 100%;
     z-index: 10;
@@ -6,6 +12,7 @@ header#site-header {
     position: fixed;
     background-color: transparent;
     transition: background-color 1s;
+    border-bottom: 1px solid transparent;
 
     div.header-inner {
         width: 98%;
@@ -19,20 +26,25 @@ header#site-header {
             display: none;
             margin: 0 auto;
             font-size: 1.35rem;
-            color: var(--dominColor);
+            color: @domin-color;
             font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
         }
 
-        button.mobile-side-button {
+        button.mobile-button {
             padding: 0;
-            left: 10px;
             width: 30px;
             height: 30px;
             display: none;
             position: absolute;
             border: none!important;
             background-color: transparent;
+        }
 
+        button.mobile-left-button {
+            left: 10px;
+        }
+
+        button.mobile-button {
             i.el-icon {
                 margin: auto;
                 width: 24px!important;
@@ -43,7 +55,7 @@ header#site-header {
                     height: 100%;
 
                     path {
-                        fill: var(--buttoColor);
+                        fill: @butto-color;
                     }
                 }
             }
@@ -73,8 +85,13 @@ header#site-header {
             transition: opacity 0.5s;
 
             div.icon-box {
+                display: flex;
                 cursor: pointer;
                 margin-left: 32px;
+
+                svg {
+                    margin: auto;
+                }
             }
 
             div.el-space {
@@ -99,7 +116,6 @@ header#site-header {
             opacity: 0;
             height: 100%;
             min-width: 20%;
-            transition: 0.5s;
             position: absolute;
             transform: translateX(-50%);
         }
@@ -127,15 +143,15 @@ header#site-header {
                         span.link-text {
                             line-height: 65px;
                             font-size: 1.35rem;
+                            color: @domin-color;
                             transition: color 1s;
-                            color: var(--dominColor);
                         }
                         
                     }
 
                     &:hover {
                         a.item-link {
-                            background-color: var(--buttoColor);
+                            background-color: @butto-color;
                             span.link-text {
                                 color: #FFFFFF;
                             }
@@ -147,7 +163,9 @@ header#site-header {
     }
 
     &:hover {
-        background-color: #FFFFFF;
+        background-color: @backard-color;
+        border-bottom: 1px solid transparent;
+
         div.header-inner {
             span.site-title {
                 opacity: 1;
@@ -156,7 +174,7 @@ header#site-header {
             a.image-link {
                 img.avatar-icon {
                     opacity: 1;
-                    border: 1px dashed var(--dominColor);
+                    border: 1px dashed @domin-color;
                 }
             }
             
@@ -168,8 +186,9 @@ header#site-header {
 }
 
 header#site-header.active {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #dddddd;
+    background-color: @backard-color;
+    border-bottom: 1px solid transparent;
+
     div.header-inner {
         span.site-title {
             opacity: 1;
@@ -178,7 +197,7 @@ header#site-header.active {
         a.image-link {
             img.avatar-icon {
                 opacity: 1;
-                border: 1px dashed var(--dominColor);
+                border: 1px dashed @domin-color;
             }
         }
 
@@ -192,7 +211,7 @@ header#site-header.active {
 @media (max-width: 768px) {
     header#site-header {
         height: 55px;
-        background-color: #FFFFFF!important;
+        background-color: @backard-color!important;
         
         div.header-inner {
             span.site-title {
@@ -200,7 +219,7 @@ header#site-header.active {
                 display: block;
             }
 
-            button.mobile-side-button {
+            button.mobile-button {
                 display: flex;
             }
 

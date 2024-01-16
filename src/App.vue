@@ -1,12 +1,12 @@
 <script setup>
   import Pace from 'pace-js'
+  import { onMounted } from 'vue'
   import Cookies from "js-cookie"
   import "@/assets/paces/pace.css"
-  import { ref, onMounted } from 'vue'
+  import { RouterView } from 'vue-router'
   import siteConfig from "../docs/main.js"
   import { ElNotification } from 'element-plus'
   import { Bell } from '@element-plus/icons-vue'
-  import { RouterLink, RouterView } from 'vue-router'
 
   document.body.style.setProperty('--dominColor',siteConfig.style.site_dominColor);
   document.body.style.setProperty('--buttoColor',siteConfig.style.site_buttoColor);

@@ -5,6 +5,7 @@ header#site-header {
   position: fixed;
   background-color: transparent;
   transition: background-color 1s;
+  border-bottom: 1px solid transparent;
 }
 header#site-header div.header-inner {
   width: 98%;
@@ -21,9 +22,8 @@ header#site-header div.header-inner span.site-title {
   color: var(--dominColor);
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
 }
-header#site-header div.header-inner button.mobile-side-button {
+header#site-header div.header-inner button.mobile-button {
   padding: 0;
-  left: 10px;
   width: 30px;
   height: 30px;
   display: none;
@@ -31,16 +31,19 @@ header#site-header div.header-inner button.mobile-side-button {
   border: none!important;
   background-color: transparent;
 }
-header#site-header div.header-inner button.mobile-side-button i.el-icon {
+header#site-header div.header-inner button.mobile-left-button {
+  left: 10px;
+}
+header#site-header div.header-inner button.mobile-button i.el-icon {
   margin: auto;
   width: 24px!important;
   height: 24px!important;
 }
-header#site-header div.header-inner button.mobile-side-button i.el-icon svg {
+header#site-header div.header-inner button.mobile-button i.el-icon svg {
   width: 100%;
   height: 100%;
 }
-header#site-header div.header-inner button.mobile-side-button i.el-icon svg path {
+header#site-header div.header-inner button.mobile-button i.el-icon svg path {
   fill: var(--buttoColor);
 }
 header#site-header div.header-inner a.image-link {
@@ -65,8 +68,12 @@ header#site-header div.header-inner div.right-button {
   transition: opacity 0.5s;
 }
 header#site-header div.header-inner div.right-button div.icon-box {
+  display: flex;
   cursor: pointer;
   margin-left: 32px;
+}
+header#site-header div.header-inner div.right-button div.icon-box svg {
+  margin: auto;
 }
 header#site-header div.header-inner div.right-button div.el-space {
   margin-top: 5px;
@@ -86,7 +93,6 @@ header#site-header div.header-inner nav.center-nav {
   opacity: 0;
   height: 100%;
   min-width: 20%;
-  transition: 0.5s;
   position: absolute;
   transform: translateX(-50%);
 }
@@ -112,8 +118,8 @@ header#site-header div.header-inner nav.center-nav ul.navlist li.navlist-item a.
 header#site-header div.header-inner nav.center-nav ul.navlist li.navlist-item a.item-link span.link-text {
   line-height: 65px;
   font-size: 1.35rem;
-  transition: color 1s;
   color: var(--dominColor);
+  transition: color 1s;
 }
 header#site-header div.header-inner nav.center-nav ul.navlist li.navlist-item:hover a.item-link {
   background-color: var(--buttoColor);
@@ -122,7 +128,8 @@ header#site-header div.header-inner nav.center-nav ul.navlist li.navlist-item:ho
   color: #FFFFFF;
 }
 header#site-header:hover {
-  background-color: #FFFFFF;
+  background-color: var(--backard-color);
+  border-bottom: 1px solid transparent;
 }
 header#site-header:hover div.header-inner span.site-title {
   opacity: 1;
@@ -136,8 +143,8 @@ header#site-header:hover div.header-inner div.right-button {
   opacity: 1;
 }
 header#site-header.active {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #dddddd;
+  background-color: var(--backard-color);
+  border-bottom: 1px solid transparent;
 }
 header#site-header.active div.header-inner span.site-title {
   opacity: 1;
@@ -152,13 +159,13 @@ header#site-header.active div.header-inner nav.center-nav {
 @media (max-width: 768px) {
   header#site-header {
     height: 55px;
-    background-color: #FFFFFF !important;
+    background-color: var(--backard-color) !important;
   }
   header#site-header div.header-inner span.site-title {
     opacity: 0;
     display: block;
   }
-  header#site-header div.header-inner button.mobile-side-button {
+  header#site-header div.header-inner button.mobile-button {
     display: flex;
   }
   header#site-header div.header-inner nav.center-nav,

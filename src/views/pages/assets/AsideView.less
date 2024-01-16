@@ -1,4 +1,14 @@
 
+@filter: var(--filter);
+@boxshadow: var(--boxshadow);
+@domin-color: var(--dominColor);
+@butto-color: var(--buttoColor);
+@textard-color: var(--textard-color);
+@primary-color: var(--primary-color);
+@backard-color: var(--backard-color);
+@borderd-color: var(--borderd-color);
+@asideba-color: var(--asideba-color);
+
 div.aside-content {
     right: 0;
     width: 275px;
@@ -7,7 +17,7 @@ div.aside-content {
     margin-left: -10px;
     padding-left: 1rem;
     border-radius: 8px;
-    animation: slide-in .6s .3s backwards;
+    animation: slide-in 0.6s 0.3s backwards;
 
     div.aside-card {
         width: 100%;
@@ -15,9 +25,19 @@ div.aside-content {
         border-radius: 8px;
         margin-bottom: 1rem;
         padding: 0.4rem 0.6rem;
-        background-color: #ffffff;
-        box-shadow: 0 8px 16px -4px #2c2d300c;
-        border: 1px solid var(--el-border-color);
+        box-shadow: @backard-color;
+        background-color: @backard-color;
+        border: 1px solid @borderd-color;
+
+        * {
+            color: @asideba-color;
+        }
+
+        svg.aside-icon {
+            path {
+                fill: @asideba-color;
+            }
+        }
 
         div.item-headline {
             height: 35px;
@@ -36,7 +56,6 @@ div.aside-content {
             }
 
             span.head-text {
-                color: #363636;
                 margin-left: 5px;
                 line-height: 35px;
             }
@@ -57,9 +76,9 @@ div.item-content {
         flex-wrap: nowrap;
         border-radius: 8px;
         flex-direction: row;
-        border: 1px solid #e3e8f7;
         transition: 0.3s ease-out;
         justify-content: flex-start;
+        border: 1px solid @borderd-color;
 
         div.power-star-image {
             width: 60px;
@@ -68,20 +87,25 @@ div.item-content {
             margin-right: 12px;
             background-size: cover;
             transition: 0.3s ease-out;
-            border: 1px solid #e3e8f7;
+            border: 1px solid #ffffff;
         }
 
         div.power-star-image {
+            filter: @filter;
             background-image: url(../../assets/icons/sponser.webp);
         }
 
         &:hover {
             color: #ffffff;
-            background-color: var(--buttoColor);
+            background-color: @butto-color;
             box-shadow: 0 8px 12px -3px #4259ef23;
 
             div.power-star-image {
                 transform: scale(0.9);
+            }
+
+            div.power-star-bodys > span {
+                color: #ffffff;
             }
         }
 
@@ -140,7 +164,6 @@ div.item-content {
                 display: block;
                 overflow: hidden;
                 border-radius: 8px;
-                border: 1px solid #e3e8f7;
 
                 img.image {
                     width: 100%;
@@ -159,7 +182,6 @@ div.item-content {
                 padding-left: 10px;
 
                 a.post-title {
-                    color: #363636;
                     padding: 2px 0;
                     font-weight: bold;
                     -webkit-line-clamp: 3;
@@ -215,7 +237,6 @@ div.item-content {
             }
 
             span.item-text {
-                color: #363636;
                 line-height: 35px;
             }
         }

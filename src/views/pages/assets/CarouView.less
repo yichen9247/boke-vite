@@ -1,12 +1,14 @@
 
+@borderd-color: var(--borderd-color);
+
 div.carousel-chart {
     width: 100%;
     height: 155px;
     margin: 35px 0;
     overflow: hidden;
     border-radius: 5px;
-    animation: slide-in .6s .3s backwards;
-    border: 1px solid var(--el-border-color);
+    border: 1px solid @borderd-color;
+    animation: slide-in 0.6s 0.3s backwards;
 
     * {
         box-sizing: unset;

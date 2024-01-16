@@ -10,9 +10,9 @@ ul.friends-list li.friends-item {
   overflow: hidden;
   position: relative;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   transition: width 0.5s;
-  border: 1px solid var(--el-border-color);
+  border: 1px solid var(--borderd-color);
 }
 ul.friends-list li.friends-item a.item-link {
   width: 100%;

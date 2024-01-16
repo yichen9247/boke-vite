@@ -1,7 +1,8 @@
 div#markdown {
   width: 100%;
   height: auto;
-  background-color: #f7f9fe;
+  min-height: calc(100% - 400px);
+  background-color: var(--primary-color);
 }
 div#markdown div.markdown-body {
   width: 90%;
@@ -35,8 +36,9 @@ div#markdown h6 {
 div.marked-notice {
   display: flex;
   align-items: center;
+  color: var(--textard-color);
+  box-shadow: var(--boxshadow);
   animation: markdown 0.6s;
-  box-shadow: 0 8px 16px -4px #2c2d300c;
 }
 div.marked-notice span.notice-text {
   font-size: 1rem;
@@ -107,8 +109,8 @@ h1.title-text {
   font-size: 2em;
   font-weight: 700;
   line-height: 1.35;
-  font-family: inherit;
   color: var(--dominColor);
+  font-family: inherit;
 }
 h1.title-text {
   margin: 15px 0;
@@ -128,12 +130,12 @@ code:not([data-language]).code-span {
   padding: 2px 6px;
   border-radius: 2px;
   color: var(--dominColor);
-  background-color: #f7f7f9;
+  background-color: var(--primary-color);
 }
 hr {
   margin: 15px 0;
   margin-bottom: 20px;
-  border: 2px dashed var(--el-border-color);
+  border: 2px dashed var(--borderd-color);
 }
 table {
   width: 100%;
@@ -141,19 +143,20 @@ table {
   margin-top: 25px;
   border-spacing: 0;
   border-radius: 5px;
-  border: 2px solid var(--el-border-color);
+  background-color: var(--backard-color);
+  border: 2px solid var(--borderd-color);
 }
 table thead {
   line-height: 1.8;
   word-wrap: break-word;
-  background-color: #f3f3f3;
+  background-color: var(--tablelo-color);
 }
 table thead tr th {
   height: 75px;
   text-align: center;
   padding-left: 24px;
-  color: rgba(0, 0, 0, 0.54);
-  border-bottom: 2px solid var(--el-border-color);
+  color: var(--tablete-color);
+  border-bottom: 2px solid var(--borderd-color);
 }
 table tbody tr {
   position: relative;
@@ -161,14 +164,14 @@ table tbody tr {
   -webkit-transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 table tbody tr:hover {
-  background-color: #eeeeee;
+  background-color: var(--tableho-color);
 }
 table tbody tr td {
   height: 70px;
   font-size: 14px;
   line-height: 24px;
   padding-left: 24px;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--textard-color);
 }
 table th {
   font-size: 13px;
@@ -183,7 +186,7 @@ th {
   text-align: center;
   position: relative;
   padding: 12px 28px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 2px solid var(--borderd-color);
 }
 table th {
   padding: 12px 28px;
@@ -191,7 +194,7 @@ table th {
 }
 table tbody tr:last-child td,
 table tbody tr:last-child th {
-  border-bottom: 0 solid var(--el-border-color);
+  border-bottom: 0 solid var(--borderd-color);
 }
 ul.ul-list li {
   display: flex;
@@ -236,9 +239,9 @@ ol.ol-list li::before {
   font-weight: 700;
   position: relative;
   margin-right: 10px;
+  color: var(--dominColor);
   display: inline-block;
   content: counter(order);
-  color: var(--dominColor);
 }
 p.paragraph {
   margin: 1rem 0;
@@ -252,14 +255,14 @@ a.link-text {
   padding: 0.25rem;
   transition: 0.5s;
   font-weight: 700;
-  border-radius: 0.25rem;
   color: var(--dominColor);
+  border-radius: 0.25rem;
   background-color: transparent;
   border-bottom: 2px dotted #c5c8cb;
 }
 a.link-text:hover {
   color: #ffffff;
-  background-color: #c5c8cb;
+  background-color: var(--linkhov-color);
 }
 p.marked-title-center {
   display: flex;
@@ -330,8 +333,8 @@ div.code-pre-block {
   padding-top: 15px;
   border-radius: 5px;
   position: relative;
-  background-color: #f5f2f0;
-  border: 1px dashed #dddddd;
+  background-color: var(--codeblo-color);
+  border: 1px dashed var(--borderd-color);
 }
 div.code-pre-block::before {
   z-index: 1;
@@ -394,12 +397,12 @@ div#markdown.markdown-page {
 }
 @keyframes overdue {
   0% {
-    -webkit-clip-path: circle(0 at 0 0);
     clip-path: circle(0 at 0 0);
+    -webkit-clip-path: circle(0 at 0 0);
   }
   100% {
-    -webkit-clip-path: circle(100%);
     clip-path: circle(100%);
+    -webkit-clip-path: circle(100%);
   }
 }
 @keyframes lamp-background {

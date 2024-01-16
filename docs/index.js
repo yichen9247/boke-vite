@@ -1,8 +1,9 @@
-import NotImage from "./assets/404.jpg"
+
+import background from "./assets/background-02.jpg"
 
 export default {
     textFick: true,
-    heaImage: NotImage,
+    heaImage: background,
     TopTitle: 'Hello Friend',
     descText: 'You got to put the past behind you before you can move on.',
     socialIcon: {

@@ -1,4 +1,7 @@
 
+@butto-color: var(--buttoColor);
+@borderd-color: var(--borderd-color);
+
 ul.friends-list {
     width: 100%;
     display: grid;
@@ -11,9 +14,9 @@ ul.friends-list {
         overflow: hidden;
         position: relative;
         border-radius: 8px;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
         transition: width 0.5s;
-        border: 1px solid var(--el-border-color);
+        border: 1px solid @borderd-color;
 
         a.item-link {
             width: 100%;
@@ -24,7 +27,7 @@ ul.friends-list {
             background-size: 100%;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: var(--buttoColor);
+            background-color: @butto-color;
 
             div.item-desc {
                 left: 0;

@@ -15,6 +15,7 @@ const docsChildren = () => {
 const routerPath = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/docs', name: 'docs', component: () => import('@/views/pages/ArticleView.vue'), meta: { config: { path: false } }, children: docsChildren()},
+  siteConfig.pages.project && { path: siteConfig.pages.project.path, component: () => import('@/views/pages/PagesView.vue'), meta: { type: 'repo', config: siteConfig.pages.project.config } },
   siteConfig.pages.privacy && { path: siteConfig.pages.privacy.path, component: () => import('@/views/pages/PagesView.vue'), meta: { type: 'post', config: siteConfig.pages.privacy.config } },
   siteConfig.pages.friends && { path: siteConfig.pages.friends.path, component: () => import('@/views/pages/PagesView.vue'), meta: { type: 'link', config: siteConfig.pages.friends.config } },
   { path: '/*', redirect: NotFounds },

@@ -1,9 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
 
-import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import copy from 'rollup-plugin-copy'
+import { fileURLToPath, URL } from 'node:url'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -14,29 +12,27 @@ export default defineConfig({
     assetsDir: 'assets', // 静态资源目录
   },
   server: {
+    hot: {reload: true,rerender: true},
     routes: {
       beforeEnter(req, res, next) {
-        if (/\.js$/.test(req.path)) {
-          res.redirect('/');
-        } else {
-          next();
-        }
-        if (/\.md$/.test(req.path)) {
-          res.redirect('/');
-        } else {
-          next();
-        }
-      }  
-    }  
+        if (/\.js$/.test(req.path)) res.redirect('/');
+        else next();
+        if (/\.md$/.test(req.path)) res.redirect('/');
+        else next();
+      }
+    }
   },
   plugins: [
-    vue(),
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
+    vue({
+      template: {
+        compilerOptions: {
+          // 所有以 mdui- 开头的标签名都是 mdui 组件
+          isCustomElement: (tag) => tag.startsWith('mdui-')
+        }
+      }
     }),
-    Components({
-      resolvers: [ElementPlusResolver()],
-    }),
+    AutoImport({resolvers: [ElementPlusResolver()]}),
+    Components({resolvers: [ElementPlusResolver()]}),
   ],
   resolve: {
     alias: {

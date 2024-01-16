@@ -4,8 +4,8 @@ div.carousel-chart {
   margin: 35px 0;
   overflow: hidden;
   border-radius: 5px;
+  border: 1px solid var(--borderd-color);
   animation: slide-in 0.6s 0.3s backwards;
-  border: 1px solid var(--el-border-color);
 }
 div.carousel-chart * {
   box-sizing: unset;

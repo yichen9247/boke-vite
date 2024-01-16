@@ -39,7 +39,7 @@ div#body-content ul.post-list div.el-space div.el-space__item li.post-list-item 
   border-radius: 8px;
   transition: 0.5s;
   flex-direction: column;
-  border: 1px solid var(--el-border-color);
+  border: 1px solid var(--borderd-color);
 }
 div#body-content ul.post-list div.el-space div.el-space__item li.post-list-item a.post-cover {
   padding: 0;

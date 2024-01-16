@@ -4,8 +4,9 @@ footer#footer {
   margin-top: 25px;
   border-radius: 8px;
   margin-bottom: 35px;
-  background-color: #ebf2ed;
-  box-shadow: 0 8px 16px -4px #2c2d300c;
+  box-shadow: var(--boxshadow);
+  border: 1px solid var(--borderd-color);
+  background-color: var(--backard-color);
 }
 footer#footer p.copyright {
   overflow: hidden;
@@ -15,8 +16,8 @@ footer#footer p.copyright {
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  text-overflow: ellipsis;
   color: var(--dominColor);
+  text-overflow: ellipsis;
 }
 footer#footer p.copyright a {
   font-size: 1rem;

@@ -1,4 +1,54 @@
 div#profile {
+  --filter: invert(0%);
+  --linkhov-color: #c5c8cb;
+  --primary-color: #f7f9fe;
+  --backard-color: #ffffff;
+  --textard-color: #000000;
+  --asideba-color: #363636;
+  --codeblo-color: #f5f2f0;
+  --tablelo-color: #f3f3f3;
+  --tableho-color: #eeeeee;
+  --mobside-color: #f2f6fc;
+  --mobautd-color: #636363;
+  --tablete-color: rgba(0, 0, 0, 0.54);
+  --boxshadow: 0 8px 16px -4px #2c2d300c;
+  --borderd-color: var(--el-border-color);
+  --moboxsh-color: rgba(158, 158, 158, 0.22);
+}
+div#profile[data-theme="dark"] {
+  --filter: invert(100%);
+  --borderd-color: #191919;
+  --backard-color: #212121;
+  --linkhov-color: #212121;
+  --primary-color: #191919;
+  --mobside-color: #191919;
+  --codeblo-color: #212121;
+  --tablelo-color: #3b3b3b;
+  --tableho-color: #616161;
+  --mobautd-color: #ffffff;
+  --tablete-color: #ffffff;
+  --textard-color: #ffffff;
+  --asideba-color: #ffffff;
+  --moboxsh-color: rgba(158, 158, 158, 0);
+}
+div#profile[data-theme="dark"] div.el-divider--horizontal {
+  border-top: 1px solid #212121;
+}
+div#profile[data-theme="dark"] div.code-pre-block {
+  color: #ffffff;
+}
+div#profile[data-theme="dark"] div.code-pre-block p,
+div#profile[data-theme="dark"] div.code-pre-block span {
+  color: #ffffff;
+}
+div#profile section#section p,
+div#profile section#section span {
+  color: var(--textard-color);
+}
+div#profile section#section li {
+  color: var(--textard-color);
+}
+div#profile {
   width: 100%;
   height: 100vh;
   overflow: hidden;

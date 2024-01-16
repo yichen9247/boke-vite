@@ -8,7 +8,8 @@ div#post-copyright {
   border-radius: 8px;
   position: relative;
   align-items: center;
-  border: 1px solid var(--el-border-color);
+  background-color: var(--backard-color);
+  border: 1px solid var(--borderd-color);
 }
 div#post-copyright div.creative-commons-mark {
   right: 15px;
@@ -28,9 +29,9 @@ div#post-copyright div.post-copyright {
 }
 div#post-copyright div.post-copyright p.copy-text {
   display: flex;
-  color: #4A4A4A;
   margin-bottom: 0;
   align-items: center;
+  color: var(--textard-color);
 }
 div#post-copyright div.post-copyright p.copy-text a {
   padding: 0;

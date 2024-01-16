@@ -1,5 +1,6 @@
 <script setup>
-    import { ref, onMounted } from 'vue'
+    import Cookies from "js-cookie"
+    import { ref, onMounted, watch } from 'vue'
     import "@/views/pages/assets/ArticleView.css"
     import headerview from "@/views/headerview.vue"
     import siteConfig from "../../../docs/main.js"
@@ -7,12 +8,13 @@
     import { useRoute, useRouter } from 'vue-router'
     import renderMarkdown from "@/scripts/markdown.js"
     import FriendView from '@/views/pages/FriendView.vue'
+    import ProjecView from '@/views/pages/ProjecView.vue'
     
     const route = useRoute();
     const router = useRouter();
     const htmlContent = ref('');
-    let config = route.meta.config;
-    var filePath = '../../../docs/' + config.path + '/README.md';
+    const config = ref(route.meta.config);
+    var filePath = '../../../docs/' + config.value.path + '/README.md';
 
     const checkSiteHref = () => {
         let links = document.getElementsByTagName('a');  
@@ -45,16 +47,20 @@
     router.beforeEach((to, from, next) => {
         next();
         setTimeout(() => {
-            config = route.meta.config;
+            config.value = route.meta.config;
             if (route.meta.type === 'post') {
-                filePath = '../../../docs/' + config.path + '/README.md';
+                filePath = '../../../docs/' + config.value.path + '/README.md';
                 fetch(filePath)
                 .then(response => response.text())
                 .then(data => toRenderMarkdown(data))
                 .catch(error => console.error('Error fetching file:', error));
                 setTimeout(() => checkImageClick(),1000);
             }
-        },10);
+        },1);
+    });
+
+    watch(config,(newValue,oldValue) => {
+        document.title = config.value.name + ' - ' + siteConfig.global.site_title;
     });
     
     onMounted(() => {
@@ -68,7 +74,7 @@
         checkSiteHref();
     });
 
-    document.title = config.name + ' - ' + siteConfig.global.site_title;
+    document.title = config.value.name + ' - ' + siteConfig.global.site_title;
     const toRenderMarkdown = (data) => {
         if (config.path !== false) {
             htmlContent.value = renderMarkdown(data);
@@ -77,7 +83,7 @@
 </script>
 
 <template>
-    <div id="profile" :style="{ animation: 'article 1s' }" v-if="config.path !== false">
+    <div id="profile" :style="{ animation: 'article 1s' }" v-if="config.path !== false" :data-theme="Cookies.get('darkTheme') !== 'true' ? 'default' : 'dark'">
         <headerview class="active"/>
         <div id="article-head">
             <img class="cover-bg" :src="config.image"/>
@@ -87,6 +93,7 @@
             <div class="markdown-body" :style="{ minHeight: '100%'  }">
                 <section id="section" v-if="route.meta.type === 'post'" v-html="htmlContent"></section>
                 <FriendView v-if="route.meta.type === 'link'"/>
+                <ProjecView v-if="route.meta.type === 'repo'"/>
                 <el-divider/>
                 <footerview />
             </div>

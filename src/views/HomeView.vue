@@ -1,5 +1,6 @@
 <script setup>
     import './assets/indexview.css'
+    import Cookies from "js-cookie"
     import { ref, onMounted } from 'vue'
     import { useRouter } from 'vue-router'
     import config from "../../docs/index.js"
@@ -57,7 +58,7 @@
 </script>
 
 <template>
-    <div id="profile">
+    <div id="profile" :data-theme="Cookies.get('darkTheme') !== 'true' ? 'default' : 'dark'">
         <headerview />
         <img class="cover-bg" :src="config.heaImage"/>
         <div id="headerfile">

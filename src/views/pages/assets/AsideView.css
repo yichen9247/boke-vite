@@ -14,9 +14,15 @@ div.aside-content div.aside-card {
   border-radius: 8px;
   margin-bottom: 1rem;
   padding: 0.4rem 0.6rem;
-  background-color: #ffffff;
-  box-shadow: 0 8px 16px -4px #2c2d300c;
-  border: 1px solid var(--el-border-color);
+  box-shadow: var(--backard-color);
+  background-color: var(--backard-color);
+  border: 1px solid var(--borderd-color);
+}
+div.aside-content div.aside-card * {
+  color: var(--asideba-color);
+}
+div.aside-content div.aside-card svg.aside-icon path {
+  fill: var(--asideba-color);
 }
 div.aside-content div.aside-card div.item-headline {
   height: 35px;
@@ -33,7 +39,6 @@ div.aside-content div.aside-card div.item-headline div.icon-box svg {
   margin: auto;
 }
 div.aside-content div.aside-card div.item-headline span.head-text {
-  color: #363636;
   margin-left: 5px;
   line-height: 35px;
 }
@@ -48,9 +53,9 @@ div.item-content div.power-star {
   flex-wrap: nowrap;
   border-radius: 8px;
   flex-direction: row;
-  border: 1px solid #e3e8f7;
   transition: 0.3s ease-out;
   justify-content: flex-start;
+  border: 1px solid var(--borderd-color);
 }
 div.item-content div.power-star div.power-star-image {
   width: 60px;
@@ -59,9 +64,10 @@ div.item-content div.power-star div.power-star-image {
   margin-right: 12px;
   background-size: cover;
   transition: 0.3s ease-out;
-  border: 1px solid #e3e8f7;
+  border: 1px solid #ffffff;
 }
 div.item-content div.power-star div.power-star-image {
+  filter: var(--filter);
   background-image: url(../../assets/icons/sponser.webp);
 }
 div.item-content div.power-star:hover {
@@ -71,6 +77,9 @@ div.item-content div.power-star:hover {
 }
 div.item-content div.power-star:hover div.power-star-image {
   transform: scale(0.9);
+}
+div.item-content div.power-star:hover div.power-star-bodys > span {
+  color: #ffffff;
 }
 div.item-content div.power-star div.power-star-bodys {
   flex-wrap: wrap;
@@ -120,7 +129,6 @@ div.item-content ul.aside-list li.aside-list-item a.post-image {
   display: block;
   overflow: hidden;
   border-radius: 8px;
-  border: 1px solid #e3e8f7;
 }
 div.item-content ul.aside-list li.aside-list-item a.post-image img.image {
   width: 100%;
@@ -137,7 +145,6 @@ div.item-content ul.aside-list li.aside-list-item div.post-content {
   padding-left: 10px;
 }
 div.item-content ul.aside-list li.aside-list-item div.post-content a.post-title {
-  color: #363636;
   padding: 2px 0;
   font-weight: bold;
   -webkit-line-clamp: 3;
@@ -176,7 +183,6 @@ div.item-content ul.webinfo-list li.webinfo-list-item div.icon-box svg {
   margin: auto;
 }
 div.item-content ul.webinfo-list li.webinfo-list-item span.item-text {
-  color: #363636;
   line-height: 35px;
 }
 div.item-content ul.side-out-social {
