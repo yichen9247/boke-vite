@@ -38,9 +38,13 @@
         let images = document.querySelectorAll("img.post-block-image");
         for (var i = 0; i < images.length; i++) {
             images[i].addEventListener('click', function(e) {
-                this.focus();
-                this.classList.add("post-block-image-full");
-                this.onblur = () => this.classList.remove("post-block-image-full");
+                let clone = this.parentNode.cloneNode(true);
+                clone.childNodes[0].classList.add("post-block-image-full");
+                this.parentNode.parentNode.appendChild(clone);
+                clone.childNodes[0].focus();
+                clone.childNodes[0].onblur = () => {
+                    this.parentNode.parentNode.removeChild(clone)
+                };
             });
         };
     }

@@ -11,8 +11,7 @@ import post_5 from "./assets/header/post-5.jpg"
 import post_6 from "./assets/header/post-6.jpg"
 import post_7 from "./assets/header/post-7.jpg"
 import post_8 from "./assets/header/post-4.jpg"
-import post_9 from "./assets/header/post-4.jpg"
-import post_10 from "./assets/header/post-4.jpg"
+import post_9 from "./assets/header/post-9.jpg"
 
 const hikototo = "也幻想过自己是鼓手，是赛车手，是小提琴手，但最后发现还是最想牵你的手，所以我松开拳头用手握紧笔，作为自己作为人类也作为你，就像是一场华尔街的阴谋，透露着优雅的杀戮。";
 
@@ -23,9 +22,8 @@ const post_4_desc = "WordPress 字体插件一款针对 WordPress 站点开发�
 const post_5_desc = "今年 2 月 7 日，为了让大家能更加身临其境的感受到 AI 的强大，微软对外发布了一款全新的，基于人工智能驱动的搜索引擎： New Bing。不知道小伙伴们有没有试用过？";
 const post_6_desc = "不知不觉，随机网易云网站已由我开发且运行了大半年的时间了，相比之前，随机网易云无论是从样式上还是功能上都有很大的改善。";
 const post_7_desc = "经常听到圈内同行说，想玩Linux却老是记不住命令，于是，我花了两天的时间自制了这款Linux运维工具箱，轻松解决想玩Linux却又记不住命令的问题，下面我就来说说这款工具箱的用途以及用法。";
-const post_8_desc = "WordPress 字体插件一款针对 WordPress 站点开发的一款可以替换网站前端字体的插件，利用该插件，站长可以快速实现替换站点前端字体等。";
-const post_9_desc = "WordPress 字体插件一款针对 WordPress 站点开发的一款可以替换网站前端字体的插件，利用该插件，站长可以快速实现替换站点前端字体等。";
-const post_10_desc = "WordPress 字体插件一款针对 WordPress 站点开发的一款可以替换网站前端字体的插件，利用该插件，站长可以快速实现替换站点前端字体等。";
+const post_8_desc = "Hi，好久不见，这是我在迁移博客架构后的第一篇文章，距离我上一次发表文章已经过去三个多月了，这三个月我经历了很多事，很忙以至于都没时间静下心来好好写写文章。";
+const post_9_desc = "2023年，时间如白驹过隙，转瞬即逝，这是一个很忙但是很充实的一年，在这一年里，我做了许多事，经历了许多挑战与成长，也收获了许多宝贵的经验。此刻，我想通过这篇博客，回顾这一年的点点滴滴，分享我的收获与感悟。";
 
 export default {
     header: {
@@ -56,8 +54,10 @@ export default {
         { path: "post-3", config: { path: "post-3", name: '叮！来自王健铮的 2022 年度总结', desc: post_3_desc, image: post_3, tags: ['年度总结','2022年度总结'], class: ['年度总结','2022'] }, isFixed: false },
         { path: "post-4", config: { path: "post-4", name: 'WordPress 字体插件 - 为建站小白而生', desc: post_4_desc, image: post_4, tags: ['我的项目','个人原创','原创作品'], class: ['年度总结','2022'] }, isFixed: false },
         { path: "post-5", config: { path: "post-5", name: '无需等待，新必应 New Bing 注册秒通过！', desc: post_5_desc, image: post_5, tags: ['实用教程'], class: ['实用教程'] }, isFixed: false },
-        { path: "post-6", config: { path: "post-6", name: '震惊！某博主不想开发后台竟是SQL语句太过复杂', desc: post_6_desc, image: post_6, tags: ['我的项目','个人原创','原创作品','日常小记','Linux'], class: ['我的项目','个人原创','原创作品','日常小记'] }, isFixed: false },
-        { path: "post-7", config: { path: "post-7", name: '自制运维工具箱，再也不用担心记不住命令了', desc: post_7_desc, image: post_7, tags: ['我的项目','个人原创','原创作品','日常小记','Linux'], class: ['我的项目','个人原创','原创作品','日常小记','Linux'] }, isFixed: false },
+        { path: "post-6", config: { path: "post-6", name: '震惊！某博主不想开发后台竟是SQL语句太过复杂', desc: post_6_desc, image: post_6, tags: ['我的项目','个人原创','原创作品','日常小记'], class: ['我的项目','个人原创','原创作品','日常小记'] }, isFixed: false },
+        { path: "post-7", config: { path: "post-7", name: '自制运维工具箱，再也不用担心记不住命令了', desc: post_7_desc, image: post_7, tags: ['我的项目','个人原创','原创作品','日常小记'], class: ['我的项目','个人原创','原创作品','日常小记'] }, isFixed: false },
+        { path: "post-8", config: { path: "post-8", name: '好久不见，分享一些我的个人原创小作品', desc: post_8_desc, image: post_8, tags: ['我的项目','个人原创','原创作品','日常小记'], class: ['我的项目','个人原创','原创作品','日常小记'] }, isFixed: true },
+        { path: "post-9", config: { path: "post-9", name: '叮！来自王健铮的 2023 年度总结', desc: post_9_desc, image: post_9, tags: ['年度总结','2023年度总结'], class: ['年度总结','2023'] }, isFixed: true },
     ],
     author: {
         author_name: '麻辣猪头',

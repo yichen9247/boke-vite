@@ -126,8 +126,8 @@ p:has(img.post-block-image-full) img.post-block-image-full {
     font-size: 2.75rem;
   }
   p > img.post-block-image {
-    width: unset;
-    max-height: unset;
+    width: 100vmin;
+    max-height: 100vmin;
   }
 }
 @media (max-width: 480px) {
